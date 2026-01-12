@@ -55,10 +55,10 @@ let client = window.client = new WebTorrent({
   tracker: {
     rtcConfig: {
       iceServers: [
-        { urls: 'stun:114.66.58.95:19244' },
+        { urls: 'stun:learning.panchuantech.cn:19244' },
       ]
     },
-    announce: ['wss://114.66.58.95:17853/announce'],
+    announce: ['wss://learning.panchuantech.cn/announce'],
   }
 })
 
