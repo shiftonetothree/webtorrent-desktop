@@ -53,7 +53,10 @@ class CreateTorrentPage extends React.Component {
 
     // Default trackers
     // const trackers = createTorrent.announceList.join('\n')
-    const trackers = ['wss://learning.panchuantech.cn/announce'].join('\n');
+    const trackers = [
+      'wss://learning.panchuantech.cn/announce',
+      'ws://121.40.137.135:8200',
+    ].join('\n');
 
     this.state = {
       comment: '',

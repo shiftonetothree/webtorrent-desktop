@@ -14,14 +14,12 @@ const WebTorrent = require('webtorrent')
 const config = require('../config')
 const { TorrentKeyNotFoundError } = require('./lib/errors')
 const torrentPoster = require('./lib/torrent-poster')
-const patchCA = require('./patch-ca')
 
 /**
  * WebTorrent version.
  */
 const VERSION = require('../../package.json').version
 
-patchCA();
 
 /**
  * Version number in Azureus-style. Generated from major and minor semver version.
@@ -56,9 +54,14 @@ let client = window.client = new WebTorrent({
     rtcConfig: {
       iceServers: [
         { urls: 'stun:learning.panchuantech.cn:19244' },
+        { urls: 'stun:stun.l.google.com:19302' },
+        { urls: 'stun:121.40.137.135:3478' },
       ]
     },
-    announce: ['wss://learning.panchuantech.cn/announce'],
+    announce: [
+        'wss://learning.panchuantech.cn/announce',
+        'ws://121.40.137.135:8200',
+      ],
   }
 })
 
