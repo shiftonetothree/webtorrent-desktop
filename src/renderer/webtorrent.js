@@ -56,12 +56,17 @@ let client = window.client = new WebTorrent({
         { urls: 'stun:learning.panchuantech.cn:19244' },
         { urls: 'stun:stun.l.google.com:19302' },
         { urls: 'stun:121.40.137.135:3478' },
+        { 
+          urls: 'turn:121.40.137.135:3478',
+          username: 'alalauncher',
+          credential: 'x9dfniubh18df',
+        },
       ]
     },
     announce: [
-        'wss://learning.panchuantech.cn/announce',
-        'ws://121.40.137.135:8200',
-      ],
+      'wss://learning.panchuantech.cn/announce',
+      'ws://121.40.137.135:8200',
+    ],
   }
 })
 
